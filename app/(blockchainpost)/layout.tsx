@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import React from "react";
 
 interface WebLayoutProps {
@@ -5,7 +6,12 @@ interface WebLayoutProps {
 }
 
 const WebLayout = ({ children }: WebLayoutProps) => {
-  return <div>layout</div>;
+  return (
+    <>
+      <Header />
+      <main>{children}</main>
+    </>
+  );
 };
 
 export default WebLayout;

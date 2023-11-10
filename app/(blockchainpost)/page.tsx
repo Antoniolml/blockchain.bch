@@ -5,7 +5,9 @@ export default function Home() {
   return (
     <Container as="section" className="py-12">
       <div>
-        <H1Heading className="">Alcanzando la libertad financiera.</H1Heading>
+        <H1Heading className="">
+          Educación financiera, el camino hacia la libertad.
+        </H1Heading>
       </div>
     </Container>
   );
