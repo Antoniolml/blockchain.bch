@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "./Container";
+import Logo from "./Logo";
 
 const Header = () => {
   return (
@@ -10,7 +11,9 @@ const Header = () => {
     >
       <Container as="nav" arial-label="Top">
         <div className="flex w-full items-center justify-between py-6">
-          <div className="flex items-center">Logo</div>{" "}
+          <div className="flex items-center">
+            <Logo />
+          </div>{" "}
           <div className="hidden font-medium capitalize lg:inline-flex ">
             <p>Educando</p>
           </div>
