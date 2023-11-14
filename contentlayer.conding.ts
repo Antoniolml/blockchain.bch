@@ -6,10 +6,10 @@ import {
 import { readFileSync } from "fs";
 import readingTime from "reading-time";
 import { rehypeAccessibleEmojis } from "rehype-accessible-emojis";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
+import rehypePrettyCode from "rehype-pretty-code";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
 const computedFields: ComputedFields = {
   readingTime: { type: "json", resolve: (doc) => readingTime(doc.body.raw) },
@@ -103,7 +103,7 @@ export const Author = defineDocumentType(() => ({
   computedFields,
 }));
 
-const themePath = "";
+const themePath = "./assets/themes/OneHunter-Vercel-color-theme.json";
 export default makeSource({
   contentDirPath: "./content",
   documentTypes: [Post, Author],
