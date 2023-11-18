@@ -84,7 +84,7 @@ export default function CodeTitle({ title, lang }: ICodeTitle) {
   return (
     <div className="code-title mt-4 flex w-full items-center justify-start gap-2 truncate rounded-t-lg border-b border-slate-700 bg-slate-900 py-3">
       <div className="hidden h-8 items-center space-x-1.5 px-4 md:flex">
-        <div className="h-[12px] w-[12px] rounded-full bg-pink-400"></div>
+        <div className="h-[12px] w-[12px] rounded-full bg-brand-400"></div>
         <div className="h-[12px] w-[12px] rounded-full bg-amber-400"></div>
         <div className="h-[12px] w-[12px] rounded-full bg-green-400"></div>
       </div>

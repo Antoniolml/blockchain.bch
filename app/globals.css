@@ -34,4 +34,28 @@
 }
 
 @layer utilities {
+  .animated-underline {
+    background-image: linear-gradient(#ffffff00, #fffefe00),
+      linear-gradient(to right, #ffffff, #ffffff);
+    background-size: 100% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .animated-underline {
+      transition: 0.3s ease;
+      transition-property: background-size, color, background-color,
+        border-color;
+    }
+  }
+  .animated-underline:hover,
+  .animated-underline:focus-visible {
+    background-size: 0 2px, 100% 2px;
+  }
+  .blog-scale {
+    transition: transform 0.75s;
+  }
+  .blog-scale:hover {
+    transform: scale(1.1);
+  }
 }

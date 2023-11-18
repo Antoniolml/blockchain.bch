@@ -1,10 +1,11 @@
-import React from "react";
-import { useMDXComponent } from "next-contentlayer/hooks";
 import { clsxm } from "@/utils";
-import Alinks from "@/components/Alinks";
-import Aimage from "@/components/Aimage";
+import { useMDXComponent } from "next-contentlayer/hooks";
+import React from "react";
 import Callout from "@/components/Callout";
 import CodeTitle from "@/components/CodeTitle";
+import Aimage from "@/components/Aimage";
+import Alinks from "@/components/Alinks";
+import Pre from "./Pre";
 
 const components = {
   Callout,
@@ -63,15 +64,26 @@ const components = {
       {...props}
     />
   ),
+  code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
+    <code
+      className={clsxm(
+        "relative rounded border bg-gray-300 bg-opacity-25 py-[0.2rem] px-[0.3rem] font-mono text-base text-slate-200",
+        className
+      )}
+      {...props}
+    />
+  ),
+
+  pre: Pre,
 };
 
-interface MDXComponetsProps {
+interface MDXComponents {
   code: string;
 }
 
-const MDXComponets = ({ code }: MDXComponetsProps) => {
+const MDXComponents = ({ code }: MDXComponents) => {
   const Component = useMDXComponent(code);
   return <Component components={components} />;
 };
 
-export default MDXComponets;
+export default MDXComponents;

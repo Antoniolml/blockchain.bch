@@ -84,7 +84,9 @@ export default function RootLayout({ children }: IRootLayout) {
         lilex.variable
       )}
     >
-      <body className="min-h-screen bg-black text-white">{children}</body>
+      <body className="min-h-screen bg-black text-white bg-no-repeat">
+        {children}
+      </body>
     </html>
   );
 }

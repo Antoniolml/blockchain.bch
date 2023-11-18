@@ -1,8 +1,10 @@
+import "./mdx.css";
 import { allAuthors, allPosts } from "@/.contentlayer/generated";
 import Alinks from "@/components/Alinks";
 import BlogHeader from "@/components/BlogHeader";
 import Container from "@/components/Container";
 import MDXComponets from "@/components/MDXComponets";
+import TableOfContents from "@/components/TableOfContents";
 import { formatDate } from "@/utils";
 import { notFound } from "next/navigation";
 import React from "react";
@@ -59,6 +61,7 @@ const SingleBlogPost = ({ params }: SingleBlogPost) => {
         readingTime={post.readingTime.text}
       />
       <Container className="flex flex-col items-center justify-start lg:flex-row lg:items-start lg:justify-between">
+        <TableOfContents source={post.body.raw} />
         <article className="max-w-full px-4 pb-8 text-white lg:max-w-3xl">
           <MDXComponets code={post.body.code} />
           <p className="mt-4 text-xl text-white">

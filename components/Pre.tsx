@@ -10,6 +10,7 @@ interface Pre extends React.HTMLAttributes<HTMLPreElement> {
 const Pre = ({ className, ...props }: Pre) => {
   const textInput = React.useRef<HTMLDivElement>(null);
   const [copied, setCopied] = React.useState(false);
+
   const onCopy = () => {
     if (textInput.current !== null) {
       setCopied(true);
